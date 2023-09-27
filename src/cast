@@ -1,0 +1,14 @@
+#ifndef _CAST_
+#define _CAST_
+
+#include <string.h>
+
+template <typename _Destination, typename _Source>
+_Destination bit_cast(_Source src)
+{
+    _Destination dst;
+    memcpy(&dst, &src, sizeof(_Destination));
+    return dst;
+}
+
+#endif //_CAST_
